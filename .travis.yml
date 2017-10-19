@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+- node
+- '4'
+install:
+- npm install
+script:
+- gulp styles
+- gulp minify
+env:
+- SAUCE_USERNAME=dear_occupant
+addons:
+  jwt:
+    secure: w+YG6IJvex4pjIHRiLSgf6QXnstzD8OI0hZmhAIobDHt139vruQWDGIOtYZ/w7LaaGVeqIy/miTy36dQiGTQq7H41dbvNrNR9NfZZtFfyAJOXqOnHjO+sgMr4DDsAsP+gX0DayFrAV+84mJ4/4mzCYrzm6TA8/+rQeKnZHT4ArOPyJfxlsTz149Zn4z6uH2ZDWTh3XBV4D49hyAa7ucMdOx7JvCYQDaj0ySQxo2eUkfrUAcCPP0BJtk4KbHDntUx2uLLvMOg6SfBtNeVM4s14KOX2MJr1b/A+iu/Q8bHRDLRRlRcfMLPlhL+473YC3HuYdJpA57+pbe4/a/oSEaHNo1FgZRevotbY1RaSZKJSJtJbWkaG9QmI8DXenq3Qr11mds/0CIYK1chI038sEBmzZPdcVnocDZVOKYVYE1iZwO9rjFvwsSFFlOnAROR4Ap+P3ruLWHRusHXNnu0PK6PijWCgENtH5LaHx6JicIeuit80TogsQRf+NxcwXbLCln8xdyDSO4Hwa3yuQPeWXLUYwgc6V3L0U8TP7ibTZFpCNxW+7cXzaABBvQXHPz6IRx09Jswu3GOFv7LYTUVK0MZw2mWiVlgNCrbFo8Z6WnKtw5dKd6wpvuHrQWxLEBtJ3a0XsZySqbVHZyZjV30bZwFVsIsF16NeaUdaQwQr8DcVac=
