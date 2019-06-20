@@ -2,17 +2,7 @@
 	"name": "ubc-clf8",
 	"version": "0.0.1",
 	"description": "Common Look and Feel framework for UBC",
-	"sasslintConfig": "config/.sass-lint.yml",
-	"browserslist": [
-		"> 1%"
-	],
-	"scripts": {
-		"test": "snyk test",
-		"csslint": "sass-lint -c config/.sass-lint.yml 'src/**/*.scss' -v -q -i 'src/sass/vendor/*'",
-		"cssbuild": "node-sass src/scss/ -o build/css/ -r --output-style expanded --indent-type tab --indent-width 1 && node-sass src/scss/ -o dist/css/ -r --output-style compressed",
-		"cssdeploy": "node-sass src/scss/ -o dist/css/ -r --output-style compressed",
-		"csswatch": "node-sass src/scss/ -w -o build/css/ -r --output-style expanded --indent-type tab --indent-width 1"
-	},
+	"private": true,
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/UBCCM/ubc-clf8.git"
@@ -27,15 +17,43 @@
 		"url": "https://github.com/UBCCM/ubc-clf8/issues"
 	},
 	"homepage": "https://github.com/UBCCM/ubc-clf8#readme",
+	"engines": {
+		"yarn": ">= 1.6",
+		"node": ">= 8.11"
+	},
+	"scripts": {
+		"test": "snyk test",
+		"serve": "cross-env NODE_ENV=development concurrently \"postcss src/css/tailwind.css -o build/css/styles.css --watch\" \"live-server ./build --watch\"",
+		"lint:css": "stylelint \"src/**/*.css\" || exit 0",
+		"build:dev": "npm run development",
+		"development": "cross-env NODE_ENV=development postcss src/css/tailwind.css -o build/css/styles.css && twig-cli \"src/html/*.html.twig\" --base src/html/ --output build/",
+		"build:prod": "npm run production",
+		"production": "cross-env NODE_ENV=production postcss src/css/tailwind.css -o dist/css/styles.css  && twig-cli \"src/html/*.html.twig\" --base src/html/ --output dist/",
+		"build:html": "cross-env NODE_ENV=production twig-cli \"src/html/*.html.twig\" --base src/html/ --output build/"
+	},
 	"dependencies": {
-		"autoprefixer": "^9.5.1",
-		"node-sass": "^4.12.0",
-		"postcss-cli": "^6.1.2",
-		"purgecss": "^1.3.0"
+		"autoprefixer": "^9.6.0",
+		"tailwindcss": "^1.0.4",
+		"twig-cli-tmpl": "^1.0.1"
 	},
 	"devDependencies": {
-		"sass-lint": "^1.13.1",
-		"snyk": "^1.154.0",
-		"tailwindcss": "^1.0.0-beta.8"
-	}
+		"@fullhuman/postcss-purgecss": "^1.2.0",
+		"concurrently": "^4.1.0",
+		"cross-env": "^5.2.0",
+		"cssnano": "^4.1.10",
+		"live-server": "^1.2.1",
+		"postcss-cli": "^6.1.2",
+		"postcss-import": "^12.0.1",
+		"snyk": "^1.118.1",
+		"stylelint": "^10.1.0",
+		"stylelint-config-standard": "^18.3.0",
+		"stylelint-no-browser-hacks": "^1.2.1",
+		"stylelint-selector-bem-pattern": "^2.1.0"
+	},
+	"browserslist": [
+		"defaults",
+		"last 2 versions",
+		"not dead",
+		"ie 11"
+	]
 }

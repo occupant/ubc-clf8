@@ -1,0 +1,28 @@
+/** @define truncate */
+
+.truncate {
+
+	/* autoprefixer: off */
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 1;
+}
+
+.truncate-2 {
+
+	/* autoprefixer: off */
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+}
+
+.truncate-3 {
+
+	/* autoprefixer: off */
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+}

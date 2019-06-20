@@ -1,0 +1,9 @@
+/** @define ubc-accordion */
+
+.ubc-accordion {
+	color: #fff;
+}
+
+.ubc-accordion__trigger--test {
+	color: #fff;
+}
