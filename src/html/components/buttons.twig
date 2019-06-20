@@ -1,0 +1,130 @@
+<style>
+.unit-button {
+  line-height: 1.5rem;
+  vertical-align: middle;
+}
+.unit-button--underline {
+  position: relative;
+  transition: all 0.125s ease-in-out;
+}
+.unit-button--underline::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #002145;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.125s ease-in-out 0s;
+}
+.unit-button--underline:hover::before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+.unit-button--underline svg {
+  transition: all 0.125s ease-in-out;
+}
+.unit-button--underline:hover svg {
+  transform: translateX(2px);
+  transition: all 0.125s ease-in-out;
+}
+.unit-button--underline-cerulean::before {
+  background-color: #00a7e1;
+}
+.unit-button--underline-summer-sky::before {
+  background-color: #40b4e5;
+}
+.unit-button--underline-malibu::before {
+  background-color: #6ec4e8;
+}
+.unit-button--underline-anakiwa::before {
+  background-color: #97d4e9;
+}
+.unit-button--underline-white::before {
+  background-color: #fff;
+}
+.unit-button--underline-heavy::before {
+  height: 4px;
+}
+</style>
+<p class="p-8">
+  <a href="#" class="unit-button unit-button--underline unit-button--underline-malibu unit-button--underline-heavy font-bold uppercase text-ubc-blue py-2 hover--no-underline mr-6">Unit button <svg role="presentation" class="inline-block h-4 w-4 text-ubc-blue-summer-sky ml-2 -mt-1">
+  <use xlink:href="#icon-arrow-circle"/>
+  </svg></a> <span class="text-grey-400 text-sm mr-6">[a element]</span>
+  <button class="unit-button unit-button--underline font-bold uppercase text-ubc-blue py-2 mr-6">Unit button <svg role="presentation" class="inline-block h-4 w-4 text-ubc-blue-summer-sky ml-2 -mt-1">
+  <use xlink:href="#icon-arrow-circle"/>
+  </svg>
+  </button> <span class="text-grey-400 text-sm">[button element]</span>
+</p>
+<style>
+.unit-button--transparent {
+  position: relative;
+  transition: all 0.125s ease-in-out;
+}
+.unit-button--transparent:hover {
+
+}
+.unit-button--transparent svg {
+  transition: all 0.125s ease-in-out;
+}
+.unit-button--transparent:hover svg {
+  transform: translateX(2px);
+  transition: all 0.125s ease-in-out;
+}
+</style>
+<p class="bg-ubc-blue-cobalt p-8">
+  <a href="#" class="unit-button unit-button--transparent text-white px-6 py-2  mr-6 border inline-block border-white hover--bg-white hover--no-underline hover--shadow-md hover--text-ubc-blue">Unit button: transparent  <svg role="presentation" class="inline-block h-4 w-4 text-ubc-blue-cerulean ml-2 -mt-1">
+  <use xlink:href="#icon-arrow-circle"/>
+  </svg></a> <span class="text-white text-sm ml-6">[a element]</span>
+</p>
+<p class="bg-ubc-blue-cobalt p-8">
+  <button class="unit-button unit-button--transparent text-white px-6 py-2  mr-6 border inline-block border-white hover--bg-white hover--no-underline hover--shadow-md hover--text-ubc-blue">Unit button: transparent  <svg role="presentation" class="inline-block h-4 w-4 text-ubc-blue-cerulean ml-2 -mt-1">
+  <use xlink:href="#icon-arrow-circle"/>
+  </svg></button> <span class="text-white text-sm ml-6">[button element]</span>
+</p>
+<style>
+.unit-button--white {
+  position: relative;
+  transition: all 0.125s ease-in-out;
+}
+.unit-button--white:hover {
+
+}
+.unit-button--white svg {
+  transition: all 0.125s ease-in-out;
+}
+.unit-button--white:hover svg {
+  transform: translateX(2px);
+  transition: all 0.125s ease-in-out;
+  color: #fff;
+}
+</style>
+<p>
+  <a href="#" class="unit-button unit-button--white text-ubc-blue-cobalt px-6 py-2 mr-6 border inline-block border-ubc-blue-cobalt hover--bg-ubc-blue-cobalt hover--text-white hover--no-underline hover--shadow-md">Unit button: white  <svg role="presentation" class="inline-block h-4 w-4 text-ubc-blue-cobalt ml-2 -mt-1">
+  <use xlink:href="#icon-arrow-circle"/>
+  </svg></a> <span class="text-grey-400 text-sm mx-6">[a element]</span>
+  <button class="unit-button unit-button--white text-ubc-blue-cobalt px-6 py-2 mr-6 border inline-block border-ubc-blue-cobalt hover--bg-ubc-blue-cobalt hover--text-white hover--no-underline hover--shadow-md">Unit button: white  <svg role="presentation" class="inline-block h-4 w-4 text-ubc-blue-cobalt ml-2 -mt-1">
+  <use xlink:href="#icon-arrow-circle"/>
+  </svg></button> <span class="text-grey-400 text-sm ml-6">[button element]</span>
+</p>
+<p>
+  <a href="#" class="unit-button unit-button--grey">Unit button: grey</a>
+  <button class="unit-button unit-button--grey">Unit button: grey</button>
+</p>
+<p>
+  <a href="#" class="unit-button unit-button--blue">Unit button: blue</a>
+  <button class="unit-button unit-button--blue">Unit button: blue</button>
+</p>
+<p>
+  <a href="#" class="unit-button unit-button--green">Unit button: green</a>
+  <button class="unit-button unit-button--green">Unit button: green</button>
+</p>
+<p>
+  <a href="#" class="unit-button unit-button--green text-sm unit-button--block">Unit button: green, small text, full-width</a>
+</p>
+<p>
+  <a href="#" class="unit-button unit-button--blue text-sm unit-button--two-line">Unit button<span>Two Line</span></a>
+</p>

@@ -1,0 +1,32 @@
+{% if offCanvasDrawer %}
+  {% set offCanvasToggle = 'drawer-toggle--primary' %}
+{% endif %}
+
+<header class="flex">
+  <a href="#" title="The University of British Columbia" class="inline-block bg-ubc-blue px-3 py-4 md--py-6">
+    <svg role="presentation" class="inline-block h-8 w-8 md--h-16 md--w-16 text-white">
+      <use xlink:href="#logo-ubc"/>
+    </svg>
+  </a>
+  <h2 class="text-lg h-8 md--h-16 mt-0 px-3">
+    {{ unitName }}
+  </h2>
+  <div class="h-8 md--h-16 px-3">
+    Search
+    <svg role="presentation" class="inline-block h-4 w-4 text-ubc-blue">
+      <use xlink:href="#icon-search"/>
+    </svg>
+  </div>
+  <a class="h-8 md--h-16 text-ubc-blue hover--no-underline hover--text-black" href="#" title="Site menu">
+    <svg role="presentation" class="inline-block h-8 w-8">
+      <use xlink:href="#icon-menu"/>
+    </svg>
+    <span class="text-xs">MENU</span>
+  </a>
+  {% if offCanvasDrawer %}
+  {% include "../includes/menu--off-canvas-drawer-trigger.twig" %}
+  {% endif %}
+  {% if not offCanvasDrawer %}
+  {% include "../includes/menu--primary.twig" %}
+  {% endif %}
+</header>

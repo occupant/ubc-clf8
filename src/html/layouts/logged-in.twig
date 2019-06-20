@@ -1,0 +1,53 @@
+{# CONFIG #}
+{% set unitName = "UBC Human Resources" %}
+{% set siteURL = "hr.ubc.ca" %}
+{% set facultyName = "" %}
+{% set clfFull = true %} {# display the full or fixed width CLF #}
+{% set offCanvasDrawer = false %}
+{% if offCanvasDrawer %}
+  {% set offCanvasDrawerDirection = 'drawer--push-left' %}
+  {# expected values are 'drawer--push-left', 'drawer--push-right' 'drawer--cover-left', 'drawer--cover-right' #}
+{% endif %}
+{% set stickyNavigation = false %}
+{% set loginActive = true %}
+
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    {% include "../includes/head.twig" %}
+    {% block custom_css %}{% endblock %}
+</head>
+<body class="full-width">
+  {% if offCanvasDrawer %}
+  <div id="pushed-content" class="{{ offCanvasDrawerDirection }} expand">
+  {% endif %}
+  {% include "../includes/header.twig" %}
+  {% if offCanvasDrawer %}
+  {% include "../includes/menu--off-canvas-drawer-trigger.twig" %}
+  {% endif %}
+  {% if not offCanvasDrawer %}
+  {% include "../includes/menu--primary.twig" %}
+  {% endif %}
+  <div class="unit-content">
+  {% block content %}{% endblock %}
+  </div>
+  {% include "../includes/footer.twig" %}
+
+  {% if offCanvasDrawer %}
+  </div>
+  <section id="off-canvas-drawer--primary" class="off-canvas-drawer {{ offCanvasDrawerDirection }}">
+    {% include "../includes/menu--off-canvas-drawer.twig" %}
+  </section>
+  <div id="off-canvas-mask" class="drawer-toggle--primary"></div>
+  {% include "../includes/scripts--off-canvas-drawer.twig" %}
+  {% endif %}
+  {% include "../includes/svg.twig" %}
+  {% include "../includes/scripts.twig" %}
+  {% if stickyNavigation %}
+    {% include "../includes/scripts--sticky-navigation.twig" %}
+  {% endif %}
+  {% block custom_javascript %}{% endblock %}
+</body>
+</html>

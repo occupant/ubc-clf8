@@ -1,0 +1,28 @@
+{# CONFIG #}
+{% set unitName = "UBC Human Resources" %}
+{% set siteURL = "hr.ubc.ca" %}
+{% set facultyName = "" %}
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ title }}</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#002145">
+  <meta name="msapplication-config" content="ieconfig.xml" />
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="apple-touch-icon" href="/img/icon.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link href="https://dmh1owdcoc38y.cloudfront.net/v.8.0.0-alpha/css/styles-all.min.v2.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600" rel="stylesheet">
+  {% block custom_css %}{% endblock %}
+</head>
+<body>
+  <div class="unit-content">
+  {% block content %}{% endblock %}
+  </div>
+  {% include "../includes/scripts.twig" %}
+  {% block custom_javascript %}{% endblock %}
+</body>
+</html>
