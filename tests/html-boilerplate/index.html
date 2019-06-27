@@ -16,6 +16,9 @@
 	<meta name="msapplication-config" content="ieconfig.xml" />
 	<!-- prefetch needed domains (such as Google Fonts) - https://css-tricks.com/prefetching-preloading-prebrowsing/ -->
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<!-- Google Fonts actually load from another domain, so we preconnect to it - https://www.smashingmagazine.com/2019/06/optimizing-google-fonts-performance/ -->
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
 	<!-- manifest defines how your page looks when saved / pinned to your mobile desktop - https://developers.google.com/web/fundamentals/web-app-manifest/-->
 	<link rel="manifest" href="/site.webmanifest">
 	<!-- similarly to the manifest, the apple touch icon defines the icon used when the site is saved to an iOS desktop - multiple sizes can be defined for various devices - https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html -->
@@ -24,8 +27,8 @@
 	<link rel="shortcut icon" href="/favicon.ico">
 	<!-- custom stylesheet -->
 	<link rel="stylesheet" href="/css/styles.css">
-	<!-- Google webfont - TBC - may want to investigate Font Face Observer - https://github.com/bramstein/fontfaceobserver - or other optimizations -->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
+	<!-- Google webfont - TBC - may want to investigate Font Face Observer - https://github.com/bramstein/fontfaceobserver - or other optimizations  - add display=swap to enable future implementation - https://www.smashingmagazine.com/2019/06/optimizing-google-fonts-performance -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
 </head>
 
 <body>
