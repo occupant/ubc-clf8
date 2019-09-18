@@ -1,0 +1,63 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"
+	integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="js/ubc.all.js"></script>
+<script>
+	jQuery(window).load(function () {
+
+		// check for javascript
+		$('html').addClass('has-js').removeClass('no-js');
+
+		// add toggle attribute function
+		$.fn.toggleAttr = function (attr, val) {
+			var hasAttr = $(this).attr(attr);
+			if (hasAttr) {
+				$(this).removeAttr(attr);
+			} else {
+				$(this).attr(attr, val);
+			}
+			return this;
+		};
+
+		// add toggle attribute value function
+		$.fn.toggleAttrVal = function (attr, val1, val2) {
+			var currentValue = $(this).attr(attr);
+			if (currentValue === val1) {
+				$(this).attr(attr, val2);
+				return this;
+			}
+			if (currentValue === val2) {
+				$(this).attr(attr, val1);
+				return this;
+			}
+			$(this).attr(attr, val1);
+			return this;
+		};
+
+		// show hidden content when trigger is clicked
+		$('.js-reveal__trigger').on('click', function (e) {
+			e.preventDefault();
+			$(this).find('use').toggleAttrVal('xlink:href', '#icon-minus', '#icon-plus');
+			$(this).toggleClass('is-open').closest('.js-reveal__parent').next('.js-reveal__target')
+				.toggleClass('is-open').toggleAttr('hidden', true);
+		});
+
+		// change active tabcordion on click
+		$('.js-tabcordion__trigger[data-tab]').on('click', function (e) {
+			e.preventDefault();
+			$(this).closest('.tabcordion').find('[data-tab=' + $(this).data('tab') + ']').addClass(
+				'is-active').siblings('[data-tab]').removeClass('is-active');
+			$(this).closest('.tabcordion').find('.tabcordion__content-wrapper [data-content=' + $(this)
+				.data('tab') + ']').addClass('is-active').siblings('[data-content]').removeClass(
+				'is-active');
+		});
+
+		// remove message from dom when dismiss button clicked
+		$('[data-dismiss]').on('click', function (e) {
+			e.preventDefault();
+			$(this).closest('.message').remove();
+		});
+
+	});
+
+</script>
+

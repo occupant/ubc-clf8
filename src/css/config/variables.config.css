@@ -1,0 +1,135 @@
+/*
+* This file contains all default application-wide Sass and CSS3 variables.
+*/
+
+/* Regular font family */
+$text-font-stack: 'Open Sans',
+	Arial,
+	sans-serif;
+
+/* Serif font family */
+$serif-font-stack: 'Merriweather',
+	Georgia,
+	Cambria,
+	'Times New Roman',
+	Times,
+	serif;
+
+/* Code (monospace) font family */
+$code-font-stack: Menlo,
+	Monaco,
+	Consolas,
+	'Liberation Mono',
+	'Courier New',
+	monospace;
+
+/* Type Variables */
+
+$base-line-height: 1.625;
+$leading: $base-line-height;
+
+/* multiply the line height and add a unit. Defaults to rem. */
+$default-typeface: $text-font-stack;
+$alternate-typeface: $serif-font-stack;
+
+/* TYPE SCALES:
+1.067 Minor Second
+1.125 Major Second
+1.200 Minor Third
+1.250 Major Third
+1.333 Perfect Fourth
+1.414 Augmented Fourth
+1.500 Perfect Fifth
+1.618 Golden Ratio
+*/
+$scale: 1.2;
+
+/* Preference is given to HSLA format */
+
+/* Online color converter: https://www.w3schools.com/colors/colors_converter.asp */
+$transparent: transparent;
+$black: #000;
+$white: #fff;
+
+/* rgb - (0,33,69) */
+$ubc-blue: #002145;
+
+/* rgb - (0,58,121) */
+$ubc-blue-sea: #003a79;
+
+/* rgb - (0,85,183) */
+$ubc-blue-cobalt: #0055b7;
+
+/* rgb - (0,167,225)
+$ubc-blue-cerulean: #00a7e1; */
+
+/* rgb - (64,180,229) */
+$ubc-blue-neptune: #40b4e5;
+
+/* rgb - (110,196,232) */
+$ubc-blue-sky: #6ec4e8;
+
+/* rgb - (151,212,233) */
+$ubc-blue-cornflower: #97d4e9;
+
+/* rgb - (255,243,249) */
+$ubc-blue-polar: #e1f3f9;
+
+/* rgb - (255,124,124) */
+$ubc-alert: #ff7c7c;
+
+/* rgb - (248,230,5) */
+$ubc-warning: #f8e605;
+
+/* rgb - (87,237,174) */
+$ubc-success: #57edae;
+
+$unit-primary: var(--color-primary);
+$unit-secondary: var(--color-secondary);
+$grey-50: #fafafa;
+$grey-100: #f5f5f5;
+$grey-300: #e0e0e0;
+$grey-500: #9e9e9e;
+$grey-700: #616161;
+$grey-900: #212121;
+
+$alert: $ubc-alert;
+$warning: $ubc-warning;
+$message: $ubc-blue-neptune;
+$confirmation: $ubc-success;
+
+$white-transparent: rgba(255, 255, 255, .5);
+
+/* Copy text color */
+$text-color: $grey-900;
+
+$default-link-color: $unit-primary;
+$default-link-color-hover: $ubc-blue;
+$default-link-color-active: $ubc-blue;
+
+$box-shadow-color: rgba(0, 0, 0, .1);
+$image-overlay-bg-colour: rgba(69, 69, 69, 1);
+$image-overlay-screen-colour: rgba(125, 134, 140, .2);
+$page-title-bg-mobile: rgba(255, 255, 255, .5);
+
+/* Gradient Colours */
+$gradient-grey-transparent: rgba(69, 69, 69, 0);
+$gradient-grey-intermediate: rgba(69, 69, 69, .6);
+$gradient-grey-intermediate-dark: rgba(69, 69, 69, .8);
+$gradient-grey-opaque: rgba(69, 69, 69, 1);
+$gradient-grey-lighter-opaque: rgba(125, 134, 140, 1);
+$gradient-grey-lighter-intermediate: rgba(125, 134, 140, .5);
+
+/* Breakpoints map */
+$breakpoint--sm: 640px;
+$breakpoint--md: 960px;
+$breakpoint--lg: 1280px;
+$breakpoint--xl: 1720px;
+$breakpoint--xxl: 2400px;
+$breakpoint--xxxl: 3200px;
+
+$breakpoint--sm--max: 639px;
+$breakpoint--md--max: 959px;
+$breakpoint--lg--max: 1279px;
+$breakpoint--xl--max: 1719px;
+$breakpoint--xxl--max: 2399px;

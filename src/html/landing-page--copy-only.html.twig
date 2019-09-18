@@ -1,0 +1,22 @@
+{% extends "layouts/default.twig" %}
+{% set title = "Landing page - copy only" %}
+{% set pageTitle = "A basic page" %}
+
+{% block content %}
+<main class="unit-content">
+	<div class="container mx-auto p-4 ">
+		{% include "components/navigation--breadcrumbs.twig" %}
+		<div class="grid-container grid-container--basic">
+			<section class="grid-area-a mb-8">
+				{% include "components/type--sample-2.twig" %}
+			</section>
+		</div>
+	</div>
+</main>
+{% endblock %}
+
+{% block custom_css %}
+{% endblock %}
+
+{% block custom_javascript %}
+{% endblock %}

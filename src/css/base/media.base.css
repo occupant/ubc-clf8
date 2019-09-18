@@ -1,0 +1,49 @@
+/** @define media */
+
+/*
+* This file contains base styles related to media, such as images, svgs and iframes.
+*/
+
+img {
+	max-width: 100%;
+}
+
+figure {
+	margin-top: $leading;
+	margin-bottom: 0;
+}
+
+figcaption {
+	@apply .text-xs;
+}
+
+.img-and-caption {
+	@apply .my-6;
+}
+
+/* svgs
+* add a default stroke width (utilities to modify in separate file)
+*/
+svg {
+	stroke-width: 2;
+	fill: none;
+}
+
+/* embedded media (iframes) */
+.media-wrapper {
+	position: relative;
+	height: 0 !important;
+	padding-top: 30px;
+	padding-bottom: 56.25%;
+	overflow: hidden;
+}
+
+.media-wrapper embed,
+.media-wrapper iframe,
+.media-wrapper object {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100% !important;
+	height: 100% !important;
+}

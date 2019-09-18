@@ -1,0 +1,50 @@
+/** @define message */
+
+/*
+* This file contains all styles related to the message component.
+*/
+
+.message {
+	@apply .py-4 .pl-4 .px-12 .shadow-lg .my-6 .relative .flex .items-center;
+}
+
+.message--success {
+	background-color: $ubc-success;
+}
+
+.message--warning {
+	background-color: $ubc-warning;
+}
+
+.message--error {
+	background-color: $ubc-alert;
+}
+
+.message--status {
+	background-color: $ubc-blue-neptune;
+}
+
+.message__close {
+	@apply .absolute .right-0 .top-0 .px-4 .py-3 .leading-none;
+}
+
+.message__close:hover {
+	@apply .no-underline .text-black;
+	background-color: rgba(255, 255, 255, .5);
+}
+
+.message__icon {
+	@apply .inline-block .h-12 .w-12 .text-ubc-blue .mr-4 .flex-none;
+}
+
+@media (min-width: $breakpoint--xl) {
+
+	.message {
+		@apply .py-8 .pl-8;
+	}
+
+	.message__icon {
+		@apply .w-20 .h-20 .mr-8;
+	}
+
+}

@@ -1,0 +1,23 @@
+{% extends "layouts/default-noclf.twig" %}
+{% set title = "Type Test" %}
+{% set pageTitle = "A basic page" %}
+
+{% block content %}
+<main class="unit-content container mx-auto px-4 md--px-0 ">
+	{% include "components/type.twig" %}
+</main>
+{% endblock %}
+
+{% block custom_css %}
+<style>
+	.show-grid {
+		background-size: 100% 1.625rem;
+		background-image: linear-gradient(to bottom, #ccc 0%, transparent 4%,
+				transparent 100%);
+	}
+
+</style>
+{% endblock %}
+
+{% block custom_javascript %}
+{% endblock %}

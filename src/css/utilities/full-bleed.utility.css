@@ -1,8 +1,10 @@
 /** @define full-bleed */
 
 /* allow content in container to have full bleed */
+
+/* NOTE: does not work within grid layout. */
 .full-bleed {
-	transform: translatex(-50vw);
-	margin-left: 50%;
 	width: 100vw;
+	margin-left: 50%;
+	transform: translateX(-50vw);
 }

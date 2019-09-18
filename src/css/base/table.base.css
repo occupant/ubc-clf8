@@ -1,0 +1,72 @@
+/** @define media */
+
+/*
+* This file contains all styles related to the table element.
+*/
+
+/* variables in file */
+$table-row-striping-color: $grey-50;
+
+table {
+	@apply .w-full .text-left;
+	margin-top: $leading;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+td,
+th {
+	@apply .align-top;
+	padding: 0 0 0 .75rem;
+	line-height: 1.2;
+}
+
+th {
+	@apply .uppercase .text-ubc-blue .py-4 .pr-4;
+}
+
+tr.odd,
+tbody tr:nth-child(2n+1) {
+	background-color: $table-row-striping-color;
+}
+
+td {
+	@apply .py-4 .pr-4;
+}
+
+/* table element variants */
+.table--responsive {
+	@apply .block .min-w-full;
+}
+
+@media (max-width: $breakpoint--md--max) {
+
+	.table--responsive table {
+		@apply .block .overflow-x-scroll;
+	}
+
+}
+
+.table--plain {
+	@apply .border-b-0;
+}
+
+.table--plain tr {
+	@apply .border-t-0;
+	background-color: transparent !important;
+}
+
+.table--condensed th,
+.table--condensed td {
+	@apply .py-1 .pr-1;
+	line-height: 1.25;
+}
+
+.table--lined tr {
+	@apply .border-b .border-grey-300;
+}
+
+.table--lined tr.odd,
+.table--lined tbody tr:nth-child(2n+1) {
+	background-color: inherit;
+}

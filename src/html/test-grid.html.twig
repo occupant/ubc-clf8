@@ -1,0 +1,500 @@
+{% extends "layouts/plain.twig" %}
+{% set title = "Grid Test" %}
+{% set pageTitle = "A basic page" %}
+
+{% block content %}
+<h1 class="container mx-auto">Grids</h1>
+<h2 class="container mx-auto">Flexbox inside container</h2>
+<div class="container mx-auto px-4 md--px-0 py-4 bg-grey-50 border-dashed border">
+	<h3>Columns distributed equally [flexbox]</h3>
+	<div class="flex -mx-4 bg-grey-100">
+		<div class="flex-1 p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text 1</div>
+		</div>
+		<div class="flex-1 p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text 2</div>
+		</div>
+		<div class="flex-1 p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text 3</div>
+		</div>
+		<div class="flex-1 p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text 4</div>
+		</div>
+	</div>
+
+	<h3>Columns with % widths [flexbox]</h3>
+	<div class="flex -mx-4 bg-grey-100">
+		<div class="w-one-quarter p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text - 1/4</div>
+		</div>
+		<div class="w-half p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text - 1/2</div>
+		</div>
+		<div class="w-one-quarter p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text - 1/4</div>
+		</div>
+	</div>
+
+	<h3>Columns with % widths #2 [flexbox]</h3>
+	<div class="flex -mx-4 bg-grey-100">
+		<div class="w-one-sixth p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text - 1/6</div>
+		</div>
+		<div class="w-one-quarter p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text - 1/4</div>
+		</div>
+		<div class="w-one-third p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text - 1/3</div>
+		</div>
+		<div class="w-one-third p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text - 1/3</div>
+		</div>
+	</div>
+
+	<h3>Responsive Columns with % widths [flexbox]</h3>
+	<div class="sm--flex sm--flex-wrap -mx-4 bg-grey-100">
+		<div class="sm--w-half md--w-one-quarter p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text - 1/4</div>
+		</div>
+		<div class="sm--w-half md--w-half p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text - 1/2</div>
+		</div>
+		<div class="w-full md--w-one-quarter p-4 h-full">
+			<div class="bg-grey-500 text-center p-4">some text - 1/4</div>
+		</div>
+	</div>
+
+	<h3>6 Columns with % widths [flexbox]</h3>
+	<div class="sm--flex -mx-4 bg-grey-100">
+		<div class="sm--w-one-sixth p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text - 1/6</div>
+		</div>
+		<div class="sm--w-one-sixth p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text - 1/6</div>
+		</div>
+		<div class="sm--w-one-sixth p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text - 1/6</div>
+		</div>
+		<div class="sm--w-one-sixth p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text - 1/6</div>
+		</div>
+		<div class="sm--w-one-sixth p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text - 1/6</div>
+		</div>
+		<div class="sm--w-one-sixth p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text - 1/6</div>
+		</div>
+	</div>
+
+	<h3>12 Columns with % widths [flexbox]</h3>
+	<div class="sm--flex -mx-4 bg-grey-100">
+		<div class="sm--w-one-twelfth p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text - 1/12</div>
+		</div>
+		<div class="sm--w-one-twelfth p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text - 1/12</div>
+		</div>
+		<div class="sm--w-one-twelfth p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text - 1/12</div>
+		</div>
+		<div class="sm--w-one-twelfth p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text - 1/12</div>
+		</div>
+		<div class="sm--w-one-twelfth p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text - 1/12</div>
+		</div>
+		<div class="sm--w-one-twelfth p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text - 1/12</div>
+		</div>
+		<div class="sm--w-one-twelfth p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text - 1/12</div>
+		</div>
+		<div class="sm--w-one-twelfth p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text - 1/12</div>
+		</div>
+		<div class="sm--w-one-twelfth p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text - 1/12</div>
+		</div>
+		<div class="sm--w-one-twelfth p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text - 1/12</div>
+		</div>
+		<div class="sm--w-one-twelfth p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text - 1/12</div>
+		</div>
+		<div class="sm--w-one-twelfth p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text - 1/12</div>
+		</div>
+	</div>
+
+	<h3>12 Columns with % widths [flexbox]</h3>
+	<div class="sm--flex sm--flex-wrap -mx-4 bg-grey-100">
+		<div class="sm--w-one-twelfth p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text - 1/12</div>
+		</div>
+		<div class="sm--w-eleven-twelfths p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text - 11/12</div>
+		</div>
+		<div class="sm--w-one-sixth p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text - 1/6</div>
+		</div>
+		<div class="sm--w-five-sixths p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text - 5/6</div>
+		</div>
+		<div class="sm--w-one-quarter p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text - 1/4</div>
+		</div>
+		<div class="sm--w-three-quarters p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text - 3/4</div>
+		</div>
+		<div class="sm--w-one-third p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text - 1/3</div>
+		</div>
+		<div class="sm--w-two-thirds p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text - 2/3</div>
+		</div>
+		<div class="sm--w-five-twelfths p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text - 5/12</div>
+		</div>
+		<div class="sm--w-seven-twelfths p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text - 7/12</div>
+		</div>
+		<div class="sm--w-half p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text - 1/2</div>
+		</div>
+		<div class="sm--w-half p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text - 1/2</div>
+		</div>
+		<div class="sm--w-seven-twelfths p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text - 7/12</div>
+		</div>
+		<div class="sm--w-five-twelfths p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text - 5/12</div>
+		</div>
+		<div class="sm--w-two-thirds p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text - 2/3</div>
+		</div>
+		<div class="sm--w-one-third p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text - 1/3</div>
+		</div>
+		<div class="sm--w-three-quarters p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text - 3/4</div>
+		</div>
+		<div class="sm--w-one-quarter p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text - 1/4</div>
+		</div>
+		<div class="sm--w-five-sixths p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text - 5/6</div>
+		</div>
+		<div class="sm--w-one-sixth p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text - 1/6</div>
+		</div>
+		<div class="sm--w-eleven-twelfths p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text - 11/12</div>
+		</div>
+		<div class="sm--w-one-twelfth p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">some text - 1/12</div>
+		</div>
+	</div>
+
+	<h3>Responsive Columns with % widths and order change [flexbox]</h3>
+	<div class="sm--flex sm--flex-wrap -mx-4 bg-grey-100">
+		<div class="sm--w-half order-third xl--order-second md--w-one-quarter p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">first div</div>
+		</div>
+		<div class="sm--w-half order-first xl--order-last md--w-half p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">second div</div>
+		</div>
+		<div class="w-full order-second xl--order-first md--w-one-quarter p-4">
+			<div class="bg-grey-500 text-center p-4 h-full">third div</div>
+		</div>
+	</div>
+</div>
+
+<h2 class="container mx-auto">Flexbox without container</h2>
+<h3>Columns distributed equally [flexbox]</h3>
+<div class="flex -mx-4 bg-grey-100">
+	<div class="flex-1 p-4">
+		<div class="bg-grey-500 text-center p-4 h-full">some text 1</div>
+	</div>
+	<div class="flex-1 p-4">
+		<div class="bg-grey-500 text-center p-4 h-full">some text 2</div>
+	</div>
+	<div class="flex-1 p-4">
+		<div class="bg-grey-500 text-center p-4 h-full">some text 3</div>
+	</div>
+	<div class="flex-1 p-4">
+		<div class="bg-grey-500 text-center p-4 h-full">some text 4</div>
+	</div>
+</div>
+
+<h3>Columns with % widths [flexbox]</h3>
+<div class="flex -mx-4 bg-grey-100">
+	<div class="w-one-quarter p-4">
+		<div class="bg-grey-500 text-center p-4 h-full">some text - 1/4</div>
+	</div>
+	<div class="w-half p-4">
+		<div class="bg-grey-500 text-center p-4 h-full">some text - 1/2</div>
+	</div>
+	<div class="w-one-quarter p-4">
+		<div class="bg-grey-500 text-center p-4 h-full">some text - 1/4</div>
+	</div>
+</div>
+
+<h3>Columns with % widths #2 [flexbox]</h3>
+<div class="flex -mx-4 bg-grey-100">
+	<div class="w-one-sixth p-4">
+		<div class="bg-grey-500 text-center p-4 h-full">some text - 1/6</div>
+	</div>
+	<div class="w-one-quarter p-4">
+		<div class="bg-grey-500 text-center p-4 h-full">some text - 1/4</div>
+	</div>
+	<div class="w-one-third p-4">
+		<div class="bg-grey-500 text-center p-4 h-full">some text - 1/3</div>
+	</div>
+	<div class="w-one-third p-4">
+		<div class="bg-grey-500 text-center p-4 h-full">some text - 1/3</div>
+	</div>
+</div>
+
+<h3>Responsive Columns with % widths [flexbox]</h3>
+<div class="sm--flex sm--flex-wrap -mx-4 bg-grey-100">
+	<div class="sm--w-half md--w-one-quarter p-4">
+		<div class="bg-grey-500 text-center p-4 h-full">some text - 1/4</div>
+	</div>
+	<div class="sm--w-half md--w-half p-4">
+		<div class="bg-grey-500 text-center p-4 h-full">some text - 1/2</div>
+	</div>
+	<div class="w-full md--w-one-quarter p-4 h-full">
+		<div class="bg-grey-500 text-center p-4">some text - 1/4</div>
+	</div>
+</div>
+
+<h3>Responsive Columns with % widths and order change [flexbox]</h3>
+<div class="sm--flex sm--flex-wrap -mx-4 bg-grey-100">
+	<div class="sm--w-half order-third xl--order-second md--w-one-quarter p-4">
+		<div class="bg-grey-500 text-center p-4 h-full">first div</div>
+	</div>
+	<div class="sm--w-half order-first xl--order-last md--w-half p-4">
+		<div class="bg-grey-500 text-center p-4 h-full">second div</div>
+	</div>
+	<div class="w-full order-second xl--order-first md--w-one-quarter p-4">
+		<div class="bg-grey-500 text-center p-4 h-full">third div</div>
+	</div>
+</div>
+<h3>Support</h3>
+<p class="ciu_embed" data-feature="flexbox" data-periods="current,past_1,past_2" data-accessible-colours="false">
+	<a href="http://caniuse.com/#feat=flexbox">Can I Use flexbox?</a> Data on support for the flexbox feature across the
+	major browsers from caniuse.com.</p>
+
+<h2 class="container mx-auto">CSS Grid inside container</h2>
+<div class="container mx-auto px-0 py-4 bg-grey-50 border-dashed border">
+	<h3>Columns distributed equally [css grid]</h3>
+	<div class="grid-container bg-grey-100 grid-container--6-equal">
+		<div class="a bg-grey-500 text-center p-4">region a
+		</div>
+		<div class="b bg-grey-500 text-center p-4">region b
+		</div>
+		<div class="c bg-grey-500 text-center p-4">region c
+		</div>
+		<div class="d bg-grey-500 text-center p-4">region d
+		</div>
+		<div class="e bg-grey-500 text-center p-4">region e
+		</div>
+		<div class="f bg-grey-500 text-center p-4">region f
+		</div>
+	</div>
+	<h3>Columns distributed equally #2 [css grid]</h3>
+	<div class="grid-container bg-grey-100 grid-container--12-equal">
+		<div class="a bg-grey-500 text-center p-4">region a
+		</div>
+		<div class="b bg-grey-500 text-center p-4">region b
+		</div>
+		<div class="c bg-grey-500 text-center p-4">region c
+		</div>
+		<div class="d bg-grey-500 text-center p-4">region d
+		</div>
+		<div class="e bg-grey-500 text-center p-4">region e
+		</div>
+		<div class="f bg-grey-500 text-center p-4">region f
+		</div>
+		<div class="g bg-grey-500 text-center p-4">region g
+		</div>
+		<div class="h bg-grey-500 text-center p-4">region h
+		</div>
+		<div class="i bg-grey-500 text-center p-4">region i
+		</div>
+		<div class="j bg-grey-500 text-center p-4">region j
+		</div>
+		<div class="k bg-grey-500 text-center p-4">region k
+		</div>
+		<div class="l bg-grey-500 text-center p-4">region l
+		</div>
+	</div>
+	<h3>Columns distributed with layout [css grid]</h3>
+	<div class="grid-container bg-grey-100 grid-container--6-stagger">
+		<div class="a bg-grey-700 text-white text-center p-4 border-dashed border">region a
+		</div>
+		<div class="b bg-grey-500 text-center p-4 border-dashed border">region b
+		</div>
+		<div class="c bg-grey-700 text-white text-center p-4 border-dashed border">region c
+		</div>
+		<div class="d bg-grey-500 text-center p-4 border-dashed border">region d
+		</div>
+		<div class="e bg-grey-700 text-white text-center p-4 border-dashed border">region e
+		</div>
+		<div class="f bg-grey-500 text-center p-4 border-dashed border">region f
+		</div>
+	</div>
+</div>
+
+<h2 class="container mx-auto">CSS Grid ouside of container</h2>
+<h3>Columns distributed equally [css grid]</h3>
+<div class="grid-container bg-grey-100 grid-container--6-equal">
+	<div class="a bg-grey-500 text-center p-4">region a
+	</div>
+	<div class="b bg-grey-500 text-center p-4">region b
+	</div>
+	<div class="c bg-grey-500 text-center p-4">region c
+	</div>
+	<div class="d bg-grey-500 text-center p-4">region d
+	</div>
+	<div class="e bg-grey-500 text-center p-4">region e
+	</div>
+	<div class="f bg-grey-500 text-center p-4">region f
+	</div>
+</div>
+<h3>Columns distributed equally #2 [css grid]</h3>
+<div class="grid-container bg-grey-100 grid-container--12-equal">
+	<div class="a bg-grey-500 text-center p-4">region a
+	</div>
+	<div class="b bg-grey-500 text-center p-4">region b
+	</div>
+	<div class="c bg-grey-500 text-center p-4">region c
+	</div>
+	<div class="d bg-grey-500 text-center p-4">region d
+	</div>
+	<div class="e bg-grey-500 text-center p-4">region e
+	</div>
+	<div class="f bg-grey-500 text-center p-4">region f
+	</div>
+	<div class="g bg-grey-500 text-center p-4">region g
+	</div>
+	<div class="h bg-grey-500 text-center p-4">region h
+	</div>
+	<div class="i bg-grey-500 text-center p-4">region i
+	</div>
+	<div class="j bg-grey-500 text-center p-4">region j
+	</div>
+	<div class="k bg-grey-500 text-center p-4">region k
+	</div>
+	<div class="l bg-grey-500 text-center p-4">region l
+	</div>
+</div>
+<h3>Columns distributed with layout [css grid]</h3>
+<div class="grid-container bg-grey-100 grid-container--6-stagger">
+	<div class="a bg-grey-700 text-white text-center p-4 border-dashed border">region a
+	</div>
+	<div class="b bg-grey-500 text-center p-4 border-dashed border">region b
+	</div>
+	<div class="c bg-grey-700 text-white text-center p-4 border-dashed border">region c
+	</div>
+	<div class="d bg-grey-500 text-center p-4 border-dashed border">region d
+	</div>
+	<div class="e bg-grey-700 text-white text-center p-4 border-dashed border">region e
+	</div>
+	<div class="f bg-grey-500 text-center p-4 border-dashed border">region f
+	</div>
+</div>
+<h3>Support</h3>
+<p class="ciu_embed" data-feature="css-grid" data-periods="current,past_1,past_2" data-accessible-colours="false">
+	<a href="http://caniuse.com/#feat=css-grid">Can I Use css grid?</a> Data on support for the css grid feature across
+	the major browsers from caniuse.com.</p>
+{% endblock %}
+
+{% block custom_css %}
+<style>
+	@media (min-width: 640px) {
+		.a {
+			grid-area: a;
+		}
+
+		.b {
+			grid-area: b;
+		}
+
+		.c {
+			grid-area: c;
+		}
+
+		.d {
+			grid-area: d;
+		}
+
+		.e {
+			grid-area: e;
+		}
+
+		.f {
+			grid-area: f;
+		}
+
+		.g {
+			grid-area: g;
+		}
+
+		.h {
+			grid-area: h;
+		}
+
+		.i {
+			grid-area: i;
+		}
+
+		.j {
+			grid-area: j;
+		}
+
+		.k {
+			grid-area: k;
+		}
+
+		.l {
+			grid-area: l;
+		}
+
+		.grid-container {
+			display: grid;
+			grid-column-gap: 32px;
+		}
+
+		.grid-container--6-equal {
+			grid-template-rows: auto;
+			grid-template-columns: repeat(6, 1fr);
+			grid-template-areas:
+				'a b c d e f';
+		}
+
+		.grid-container--6-stagger {
+			grid-row-gap: 32px;
+			grid-template-rows: auto 1fr auto;
+			grid-template-columns: 1fr 2fr 1fr;
+			grid-template-areas:
+				'a a b'
+				'c d b'
+				'c e f';
+		}
+
+		.grid-container--12-equal {
+			grid-template-rows: auto;
+			grid-template-columns: repeat(12, 1fr);
+			grid-template-areas:
+				'a b c d e f g h i j k l';
+		}
+	}
+
+</style>
+{% endblock %}
+
+{% block custom_javascript %}
+<script src="https://cdn.jsdelivr.net/gh/ireade/caniuse-embed/caniuse-embed.min.js"></script>
+{% endblock %}

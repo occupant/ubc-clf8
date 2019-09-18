@@ -1,0 +1,35 @@
+{% extends "layouts/default.twig" %}
+{% set title = "HR SVG Icon Test" %}
+{% set pageTitle = "HR SVG Icon Test" %}
+
+
+{% block content %}
+<main class="unit-content container mx-auto pb-4">
+	<h1 class="text-ubc-blue">{{ pageTitle }}</h1>
+
+
+	<h3 class="uppercase mt-12">SVG Icons</h3>
+	<hr />
+	{% include "components/component--icons.twig" %}
+	<p><strong>Medium icons (2 rem w and h)</strong></p>
+	{% include "components/component--icons-medium.twig" %}
+	<p><strong>Smaller icons (1.5 rem w and h)</strong></p>
+	{% include "components/component--icons-mid.twig" %}
+	<p><strong>Small icons (1 rem w and h)</strong></p>
+	{% include "components/component--icons-small.twig" %}
+	<p><strong>Medium icons - stroke doesn't scale (2 rem w and h)</strong></p>
+	{% include "components/component--icons-medium--stroke-noscale.twig" %}
+	<p><strong>Natural icons (size same as svg) - stroke doesn't scale (4 rem w and h)</strong></p>
+	{% include "components/component--icons-natural--stroke-noscale.twig" %}
+
+	<p><strong>Icons (changing size and stroke width)</strong></p>
+	{% include "components/component--icons-resizing.twig" %}
+
+</main>
+{% endblock %}
+
+{% block custom_css %}
+{% endblock %}
+
+{% block custom_javascript %}
+{% endblock %}

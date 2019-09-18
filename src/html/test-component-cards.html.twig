@@ -1,0 +1,332 @@
+{% extends "layouts/default.twig" %}
+{% set title = "Card Test" %}
+{% set pageTitle = "Test Card Components" %}
+
+{% block content %}
+<main class="unit-content container mx-auto px-4 show-grid">
+
+	<div class="auto-grid auto-grid--third mt-6">
+
+		<div class="auto-grid__cell">
+			<article class="ubc-card ubc-card--vert">
+				<div class="ubc-card__media bg-grey-300"><img src="https://live.staticflickr.com/4584/38588637591_0241df7a93_z_d.jpg" alt="UBC I day"
+						class="object-cover w-full h-full"></div>
+				<div class="ubc-card__content bg-grey-100">content</div>
+				<div class="ubc-card__actions bg-grey-50">actions</div>
+			</article>
+		</div>
+
+		<div class="auto-grid__cell">
+			<article class="ubc-card ubc-card--vert">
+				<div class="ubc-card__media bg-grey-300"><img src="https://live.staticflickr.com/4584/38588637591_0241df7a93_z_d.jpg" alt="UBC I day"
+						class="object-cover h-32 w-full"></div>
+				<div class="ubc-card__content bg-grey-100">content<br />test</div>
+				<div class="ubc-card__actions bg-grey-50">actions</div>
+			</article>
+		</div>
+
+		<div class="auto-grid__cell">
+			<article class="ubc-card ubc-card--vert">
+				<div class="ubc-card__media bg-grey-300">media</div>
+				<div class="ubc-card__content bg-grey-100">content</div>
+				<div class="ubc-card__actions bg-grey-50">actions</div>
+			</article>
+		</div>
+
+	</div>
+
+	<div class="auto-grid auto-grid--third mt-6">
+
+		<div class="auto-grid__cell">
+			<article class="ubc-card ubc-card--horiz">
+				<div class="ubc-card__media bg-grey-300"><img src="https://live.staticflickr.com/4584/38588637591_0241df7a93_z_d.jpg" alt="UBC I day"
+						class="object-cover h-full w-32"></div>
+				<div class="ubc-card__content bg-grey-100">content</div>
+				<div class="ubc-card__actions bg-grey-50">actions</div>
+			</article>
+		</div>
+
+		<div class="auto-grid__cell">
+			<article class="ubc-card ubc-card--horiz">
+				<div class="ubc-card__media bg-grey-300"><img src="https://live.staticflickr.com/4584/38588637591_0241df7a93_z_d.jpg" alt="UBC I day"
+						class="object-cover w-full h-full"></div>
+				<div class="ubc-card__content bg-grey-100">content</div>
+				<div class="ubc-card__actions bg-grey-50">actions</div>
+			</article>
+		</div>
+
+		<div class="auto-grid__cell">
+			<article class="ubc-card ubc-card--horiz">
+				<div class="ubc-card__media bg-grey-300"><img src="https://live.staticflickr.com/4584/38588637591_0241df7a93_z_d.jpg" alt="UBC I day"
+						class="object-cover w-full h-full"></div>
+				<div class="ubc-card__content bg-grey-100">content</div>
+				<div class="ubc-card__actions bg-grey-50">actions</div>
+			</article>
+		</div>
+
+	</div>
+
+	<div class="auto-grid auto-grid--third mt-6">
+
+		<div class="auto-grid__cell">
+			<article class="ubc-card ubc-card--horiz-media">
+				<div class="ubc-card__media bg-grey-300">media</div>
+				<div class="ubc-card__content bg-grey-100">content</div>
+				<div class="ubc-card__actions bg-grey-50">actions</div>
+			</article>
+		</div>
+
+		<div class="auto-grid__cell">
+			<article class="ubc-card ubc-card--horiz-media">
+				<div class="ubc-card__media bg-grey-300">media</div>
+				<div class="ubc-card__content bg-grey-100">content</div>
+				<div class="ubc-card__actions bg-grey-50">actions</div>
+			</article>
+		</div>
+
+		<div class="auto-grid__cell">
+			<article class="ubc-card ubc-card--horiz-media">
+				<div class="ubc-card__media bg-grey-300">media</div>
+				<div class="ubc-card__content bg-grey-100">content</div>
+				<div class="ubc-card__actions bg-grey-50">actions</div>
+			</article>
+		</div>
+
+	</div>
+
+	<div class="auto-grid auto-grid--third mt-6">
+
+		<div class="auto-grid__cell">
+
+			<article class="ubc-card ubc-card--horiz-media-r">
+				<div class="ubc-card__media bg-grey-300">media</div>
+				<div class="ubc-card__content bg-grey-100">content</div>
+				<div class="ubc-card__actions bg-grey-50">actions</div>
+			</article>
+		</div>
+
+		<div class="auto-grid__cell">
+			<article class="card card--horiz-media-r">
+				<div class="card__media bg-grey-300">media</div>
+				<div class="card__content bg-grey-100">content</div>
+				<div class="card__actions bg-grey-50">actions</div>
+			</article>
+		</div>
+
+		<div class="auto-grid__cell">
+			<article class="card card--horiz-media-r">
+				<div class="card__media bg-grey-300">media</div>
+				<div class="card__content bg-grey-100">content</div>
+				<div class="card__actions bg-grey-50">actions</div>
+			</article>
+		</div>
+
+	</div>
+
+	<h3>mixed</h3>
+
+	<div class="auto-grid auto-grid--quarter mt-6">
+
+		<div class="auto-grid__cell">
+			<article class="ubc-card ubc-card--vert">
+				<div class="ubc-card__media bg-grey-300">media</div>
+				<div class="ubc-card__content bg-grey-100">content</div>
+				<div class="ubc-card__actions bg-grey-50">actions</div>
+			</article>
+		</div>
+
+		<div class="auto-grid__cell">
+			<article class="ubc-card ubc-card--horiz-media">
+				<div class="ubc-card__media bg-grey-300">media</div>
+				<div class="ubc-card__content bg-grey-100">content</div>
+				<div class="ubc-card__actions bg-grey-50">actions</div>
+			</article>
+		</div>
+
+		<div class="auto-grid__cell">
+			<article class="ubc-card ubc-card--horiz-media-r">
+				<div class="ubc-card__media bg-grey-300">media</div>
+				<div class="ubc-card__content bg-grey-100">content</div>
+				<div class="ubc-card__actions bg-grey-50">actions</div>
+			</article>
+		</div>
+
+		<div class="auto-grid__cell">
+			<article class="ubc-card ubc-card--horiz">
+				<div class="ubc-card__media bg-grey-300">media</div>
+				<div class="ubc-card__content bg-grey-100">content</div>
+				<div class="ubc-card__actions bg-grey-50">actions</div>
+			</article>
+
+		</div>
+
+	</div>
+
+	<h3>missing grid areas</h3>
+
+	<div class="auto-grid auto-grid--third mt-6">
+		<div class="auto-grid__cell">
+
+			<article class="ubc-card ubc-card--horiz">
+				<div class="ubc-card__content bg-grey-100">content</div>
+				<div class="ubc-card__actions bg-grey-50">actions</div>
+			</article>
+		</div>
+		<div class="auto-grid__cell">
+
+			<article class="ubc-card ubc-card--horiz">
+				<div class="ubc-card__media bg-grey-300"><img src="https://live.staticflickr.com/4584/38588637591_0241df7a93_z_d.jpg" alt="UBC I day"
+						class="object-cover w-full h-full"></div>
+				<div class="ubc-card__content bg-grey-100">content</div>
+				<div class="ubc-card__actions bg-grey-50">actions</div>
+			</article>
+		</div>
+		<div class="auto-grid__cell">
+
+			<article class="ubc-card ubc-card--horiz">
+				<div class="ubc-card__media bg-grey-300"><img src="https://live.staticflickr.com/4584/38588637591_0241df7a93_z_d.jpg" alt="UBC I day"
+						class="object-cover w-full h-full"></div>
+				<div class="ubc-card__content bg-grey-100">content</div>
+			</article>
+
+		</div>
+
+	</div>
+
+	<div class="auto-grid auto-grid--third mt-6">
+		<div class="auto-grid__cell">
+
+			<article class="ubc-card ubc-card--horiz-media">
+				<div class="ubc-card__media bg-grey-300">media</div>
+				<div class="ubc-card__content bg-grey-100">content</div>
+			</article>
+		</div>
+		<div class="auto-grid__cell">
+
+			<article class="ubc-card ubc-card--horiz-media">
+				<div class="ubc-card__content bg-grey-100">content</div>
+				<div class="ubc-card__actions bg-grey-50">actions</div>
+			</article>
+		</div>
+		<div class="auto-grid__cell">
+
+			<article class="ubc-card ubc-card--horiz-media">
+				<div class="ubc-card__media bg-grey-300">media</div>
+				<div class="ubc-card__content bg-grey-100">content</div>
+				<div class="ubc-card__actions bg-grey-50">actions</div>
+			</article>
+
+		</div>
+
+	</div>
+	<h2>Card - refactor</h2>
+	<hr />
+	<div class="md--auto-grid md--auto-grid--half xl--auto-grid--one-quarter">
+		<div class="auto-grid__cell">
+			<a href="#" class="ubc-card ubc-card--vert group">
+				<div class="ubc-card__media h-64 bg-cover"
+					style="background-image: url(https://live.staticflickr.com/4584/38588637591_0241df7a93_z_d.jpg);"></div>
+				<div class="ubc-card__content p-4">
+					<div class="ubc-card__meta meta text-xs xl--text-base bg-ubc-blue-polar">
+						category</div>
+					<h2 class="ubc-card__title">Some title</h2>
+					<p>Whole card link. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+				<div class="ubc-card__actions py-4 text-right">
+					<p
+						class="unit-button unit-button--plain unit-button--has-icon-right unit-button--animate-icon mr-0 mt-0">
+						Explore <svg role="presentation" class="unit-button__icon">
+							<use xlink:href="#icon-arrow-circle"></use>
+						</svg></p>
+				</div>
+			</a>
+		</div>
+
+
+		<div class="auto-grid__cell">
+			<a href="#" class="ubc-card ubc-card--vert group">
+				<div class="ubc-card__media h-64 bg-cover"
+					style="background-image: url(https://live.staticflickr.com/4584/38588637591_0241df7a93_z_d.jpg);"></div>
+				<div class="ubc-card__content p-4">
+					<div class="ubc-card__meta meta text-xs xl--text-base bg-ubc-blue-polar">
+						category</div>
+					<h2 class="ubc-card__title">Some title</h2>
+					<p>Whole card link. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+				<div class="ubc-card__actions py-4 text-right">
+					<p
+						class="unit-button unit-button--plain unit-button--has-icon-right unit-button--animate-icon mr-0 mt-0">
+						Explore <svg role="presentation" class="unit-button__icon">
+							<use xlink:href="#icon-arrow-circle"></use>
+						</svg></p>
+				</div>
+			</a>
+		</div>
+
+	</div>
+
+</main>
+{% endblock %}
+
+{% block custom_css %}
+<style>
+
+
+
+/* sytles */
+.ubc-card {
+	@apply .shadow;
+	color: black;
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.ubc-card:hover {
+	@apply .shadow-lg .no-underline;
+	text-decoration: none;
+	box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.ubc-card__title {
+	text-transform: uppercase;
+	font-weight: 700;
+	color: #0055b7;
+	margin-top: 0;
+	font-size: 1.125rem;
+	letter-spacing: .025em;
+}
+
+.ubc-card__content {
+	padding: 1rem;
+}
+
+.ubc-card__meta {
+	text-transform: uppercase;
+	display: inline-block;
+	padding: .25rem .5rem .25rem 1rem;
+	margin-bottom: 1rem;
+	margin-left: -1rem;
+	font-size: .75rem;
+}
+
+.ubc-card__actions {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+@media (min-width: 1720px) {
+
+	.ubc-card__meta {
+		font-size: 1rem;
+	}
+
+	.ubc-card__title {
+		font-size: 1.5rem;
+	}
+
+}
+
+</style>
+{% endblock %}
+
+{% block custom_javascript %}
+{% endblock %}

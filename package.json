@@ -23,32 +23,39 @@
 	},
 	"scripts": {
 		"test": "snyk test",
-		"serve": "cross-env NODE_ENV=development concurrently \"postcss src/css/tailwind.css -o build/css/styles.css --watch\" \"live-server ./build --watch\"",
+		"serve": "cross-env NODE_ENV=development concurrently \"postcss src/css/styles.css -o build/css/styles-all.css --watch\" \"live-server ./build --watch\" ",
 		"lint:css": "stylelint \"src/**/*.css\" || exit 0",
+		"lint:fix-css": "stylelint \"src/**/*.css\" --fix || exit 0",
 		"build:dev": "npm run development",
-		"development": "cross-env NODE_ENV=development postcss src/css/tailwind.css -o build/css/styles.css && twig-cli \"src/html/*.html.twig\" --base src/html/ --output build/",
+		"development": "cross-env NODE_ENV=development postcss src/css/styles.css -o build/css/styles-all.css && twig-cli \"src/html/*.html.twig\" --base src/html/ --output build/ && babel src/html/js --out-file build/js/ubc.all.js --ignore \"src/html/js/libs/*\" --source-maps",
 		"build:prod": "npm run production",
-		"production": "cross-env NODE_ENV=production postcss src/css/tailwind.css -o dist/css/styles.css  && twig-cli \"src/html/*.html.twig\" --base src/html/ --output dist/",
-		"build:html": "cross-env NODE_ENV=production twig-cli \"src/html/*.html.twig\" --base src/html/ --output build/"
+		"production": "cross-env NODE_ENV=production postcss src/css/styles.css -o dist/css/styles-all.css  && twig-cli \"src/html/*.html.twig\" --base src/html/ --output dist/ && babel src/html/js --out-file dist/js/ubc.all.js --ignore \"src/html/js/libs/*\" --presets minify",
+		"build:html": "cross-env NODE_ENV=production twig-cli \"src/html/*.html.twig\" --base src/html/ --output build/",
+		"build:js": "babel src/html/js --out-file build/js/ubc.all.js --ignore \"src/html/js/libs/*\""
 	},
 	"dependencies": {
 		"autoprefixer": "^9.6.0",
-		"tailwindcss": "^1.0.4",
+		"tailwindcss": "^1.1.2",
 		"twig-cli-tmpl": "^1.0.1"
 	},
 	"devDependencies": {
+		"@babel/cli": "^7.5.5",
+		"@babel/core": "^7.5.5",
 		"@fullhuman/postcss-purgecss": "^1.2.0",
+		"babel-preset-minify": "^0.5.0",
 		"concurrently": "^4.1.0",
 		"cross-env": "^5.2.0",
 		"cssnano": "^4.1.10",
 		"live-server": "^1.2.1",
 		"postcss-cli": "^6.1.2",
+		"postcss-custom-properties": "^9.0.2",
 		"postcss-import": "^12.0.1",
-		"snyk": "^1.118.1",
+		"postcss-simple-vars": "^5.0.2",
+		"snyk": "^1.210.0",
 		"stylelint": "^10.1.0",
+		"stylelint-config-rational-order": "^0.1.2",
 		"stylelint-config-standard": "^18.3.0",
-		"stylelint-no-browser-hacks": "^1.2.1",
-		"stylelint-selector-bem-pattern": "^2.1.0"
+		"stylelint-order": "^3.0.1"
 	},
 	"browserslist": [
 		"defaults",

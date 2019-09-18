@@ -1,0 +1,159 @@
+/** @define card */
+
+/*
+* This file contains all styles related to the card component.
+*/
+
+/* card layouts */
+.ubc-card__media {
+	grid-area: a;
+}
+
+.ubc-card__content {
+	grid-area: b;
+	padding: 2rem;
+}
+
+.ubc-card__actions {
+	grid-area: c;
+	padding: 2rem;
+}
+
+.ubc-card {
+	display: grid;
+	grid-row-gap: 0;
+	grid-column-gap: 0;
+	height: 100%;
+}
+
+.ubc-card--vert,
+.ubc-card--basic {
+	grid-template-areas:
+		'a'
+		'b'
+		'c';
+	grid-template-rows: auto 1fr auto;
+	grid-template-columns: 1fr;
+}
+
+.ubc-card--horiz {
+	grid-template-areas: 'a b c';
+	grid-template-rows: auto;
+	grid-template-columns: 1fr 2fr auto;
+	min-height: 15rem;
+}
+
+.ubc-card--horiz-rev {
+	grid-template-areas: 'c b a';
+	grid-template-rows: auto;
+	grid-template-columns: auto 2fr 1fr;
+	min-height: 15rem;
+}
+
+.ubc-card--horiz-media {
+	grid-template-areas:
+		'a b'
+		'a c';
+	grid-template-rows: 1fr auto;
+	grid-template-columns: 1fr 2fr;
+	min-height: 15rem;
+}
+
+.ubc-card--horiz-media-r {
+	grid-template-areas:
+		'b a'
+		'c a';
+	grid-template-rows: 1fr auto;
+	grid-template-columns: 2fr 1fr;
+	min-height: 15rem;
+}
+
+.ubc-card--basic .ubc-card__content {
+	padding: 2rem 0 0;
+}
+
+.ubc-card--basic .ubc-card__actions {
+	padding: 0 0 2rem;
+}
+
+.ubc-card--vert .ubc-card__content,
+.ubc-card--vert .ubc-card__actions {
+	padding: 1rem;
+}
+
+.ubc-card--image-w-overlay {
+	@apply .block;
+}
+
+.ubc-card--image-w-overlay .ubc-card__media {
+	@apply .block .text-white .bg-cover .w-full;
+}
+
+/* Card styles */
+.ubc-card--shadow {
+	@apply .shadow;
+}
+
+.ubc-card--shadow:hover {
+	@apply .shadow-lg;
+}
+
+.card__title {
+	@apply .uppercase .font-bold .text-ubc-blue-cobalt .mt-0 .text-lg;
+	letter-spacing: .025em;
+}
+
+.card__title--small {
+	@apply .text-base .text-hug;
+}
+
+.card__title--large {
+	font-size: 2rem;
+	line-height: 1.3;
+}
+
+.card__subtitle {
+	@apply .mt-2 .text-sm .font-normal .uppercase;
+	letter-spacing: .025em;
+}
+
+.card__subtitle--lined {
+	@apply .inline-block .border-t-2 .border-white .mt-2 .pt-2;
+}
+
+.card__meta {
+	@apply .relative .uppercase .text-xs .inline-block .p-1 .pl-4 .pr-2 .-ml-4 .mb-4 .bg-ubc-blue-polar;
+}
+
+.card__meta--wide {
+	@apply .pl-8 .-ml-8;
+}
+
+@media (min-width: $breakpoint--xl) {
+
+	.card__title {
+		font-size: 1.75rem;
+	}
+
+	.card__title--large {
+		font-size: 2.75rem;
+	}
+
+	.card__title--small {
+		@apply .text-xl;
+	}
+
+	.card__subtitle {
+		@apply .text-lg;
+	}
+
+	.card__meta {
+		font-size: 1rem;
+	}
+
+}
+
+/* card__title- for features / masthead / banner
+ font-size: 2.75rem
+ line-height: 1.3;
+ */
