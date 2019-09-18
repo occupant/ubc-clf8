@@ -14,10 +14,13 @@
 	<meta name="theme-color" content="#002145">
 	<!-- link to local XML file that defines how your site looks when saved as a tile in Windows - https://technet.microsoft.com/en-us/windows/dn255024(v=vs.60) -->
 	<meta name="msapplication-config" content="ieconfig.xml" />
-	<!-- prefetch needed domains (such as Google Fonts) - https://css-tricks.com/prefetching-preloading-prebrowsing/ -->
-	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<!-- preconnect to needed domains (such as Google Fonts) - https://css-tricks.com/prefetching-preloading-prebrowsing/ -->
+	<!-- TODO - test actual domains on multiple browsers to trace needed domains for Google Fonts -->
+	<link rel="preconnect" href="https://fonts.gstatic.com/">
 	<!-- Google Fonts actually load from another domain, so we preconnect to it - https://www.smashingmagazine.com/2019/06/optimizing-google-fonts-performance/ -->
-	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+	<link rel="preconnect" href="https://themes.googleusercontent.com/" crossorigin>
+	<!-- preload Google Fonts as we will need it for sure - https://css-tricks.com/prefetching-preloading-prebrowsing/ -->
+	<link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&amp;display=swap" as="font" crossorigin="anonymous">
 
 	<!-- manifest defines how your page looks when saved / pinned to your mobile desktop - https://developers.google.com/web/fundamentals/web-app-manifest/-->
 	<link rel="manifest" href="/site.webmanifest">
@@ -28,7 +31,7 @@
 	<!-- custom stylesheet -->
 	<link rel="stylesheet" href="/css/styles.css">
 	<!-- Google webfont - TBC - may want to investigate Font Face Observer - https://github.com/bramstein/fontfaceobserver - or other optimizations  - add display=swap to enable future implementation - https://www.smashingmagazine.com/2019/06/optimizing-google-fonts-performance -->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap">
 </head>
 
 <body>
