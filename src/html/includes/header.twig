@@ -1,27 +1,51 @@
-<header class="flex bg-grey-50 border-b-2 border-grey-200 items-center sticky w-full z-50 top-0">
-	<a href="#" title="The University of British Columbia" class="inline-block bg-ubc-blue px-3 py-4 md--py-6"><span
-			class="visually-hidden">The Uniiversity of British Columbia</span>
-		<svg role="presentation" class="inline-block h-8 w-8 md--h-16 md--w-16 text-white">
-			<use xlink:href="#logo-ubc"></use>
-		</svg>
-	</a>
-	<h2 class="text-base sm--text-lg mt-0 px-3 flex-1">
-		{{ unitName }}
-	</h2>
-	<div class="no-grow text-right pr-4">
-		<form>
-			<label class="text-xs">SEARCH</label>
-			<svg role="presentation" class="inline-block h-8 w-8 text-ubc-blue">
-				<use xlink:href="#icon-search"></use>
-			</svg>
-		</form>
-	</div>
-	<div class="text-right no-grow px-4">
-		<a class="text-ubc-blue hover--no-underline hover--text-black" href="#" title="Site menu">
-			<span class="text-xs">MENU</span>
-			<svg role="presentation" class="inline-block h-8 w-8">
-				<use xlink:href="#icon-menu"></use>
+<header class="dbi-header">
+	<div class="dbi-header__container container mx-auto">
+		<a href="#" title="The University of British Columbia Logo" class="dbi-header__branding">
+			<span class="visually-hidden">The University of British Columbia</span>
+			<svg role="presentation" class="dbi-header__logo">
+				<use xlink:href="#logo-ubc"></use>
 			</svg>
 		</a>
+		<h2 class="dbi-header__unit-name">{{ unitName }}</h2>
+		<div class="dbi-header__utility">
+			<form>
+				<label class="dbi-header__utility-label">SEARCH</label>
+				<svg role="presentation" class="dbi-header__icon">
+					<use xlink:href="#icon-search"></use>
+				</svg>
+			</form>
+			<a class="dbi-header__utility-link" href="#" title="Site menu">
+				<span class="dbi-header__utility-label">MENU</span>
+				<svg role="presentation" class="dbi-header__icon">
+					<use xlink:href="#icon-menu"></use>
+				</svg>
+			</a>
+		</div>
+		<nav class="dbi-header__nav">
+			<h3 class="visually-hidden">Primary Navigation</h3>
+			<ul class="dbi-header__links">
+				<li>
+					<a href="#" class="dbi-link">Home</a>
+				</li>
+				<li>
+					<a href="#" class="dbi-link">UBC Careers</a>
+				</li>
+				<li>
+					<a href="#" class="dbi-link">New to UBC</a>
+				</li>
+				<li>
+					<a href="#" class="dbi-link">Work/Life at UBC</a>
+				</li>
+				<li>
+					<a href="#" class="dbi-link">Employee Resources</a>
+				</li>
+				<li>
+					<a href="#" class="dbi-link--alt">Hiring + Managing</a>
+				</li>
+				<li>
+					<a href="#" class="dbi-link--alt">About UBC HR</a>
+				</li>
+			</ul>
+		</nav>
 	</div>
 </header>

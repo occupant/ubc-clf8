@@ -1,0 +1,186 @@
+/** @define Digital Brand Identity */
+
+/*
+* This file contains all styles used to output the required elements
+* used in UBC's Digital Brand Identity (DBI).
+*/
+
+$gradient-ubc-blue-transparent: rgba(0, 33, 69, 0);
+$gradient-ubc-blue-opaque: rgba(0, 33, 69, 1);
+
+.dbi-header {
+	position: sticky;
+	background-color: #fff;
+	width: 100%;
+	z-index: 5;
+	top: 0;
+	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.dbi-header__container {
+	display: grid;
+	padding-right: 1rem;
+	padding-left: 1rem;
+	grid-column-gap: 0;
+	grid-template-areas:
+		'a b c';
+	grid-template-columns: auto 1fr auto;
+}
+
+.dbi-header__branding {
+	display: block;
+	background-color: $ubc-blue;
+	padding-top: 1rem;
+	padding-right: .75rem;
+	padding-bottom: 1rem;
+	padding-left: .75rem;
+	grid-area: a;
+}
+
+.dbi-header__logo {
+	display: inline-block;
+	height: 2rem;
+	width: 2rem;
+	color: $white;
+}
+
+.dbi-header__unit-name {
+	grid-area: b;
+	margin-top: 0;
+	padding-top: .5rem;
+	padding-bottom: .5rem;
+	padding-left: 1rem;
+	font-size: 1.35rem;
+	align-self: center;
+	color: $ubc-blue;
+}
+
+.dbi-header__utility {
+	grid-area: c;
+	display: flex;
+	text-align: right;
+	flex-grow: 0;
+	align-self: center;
+}
+
+.dbi-header__icon {
+	display: inline-block;
+	height: 2rem;
+	width: 2rem;
+	color: $ubc-blue;
+}
+
+.dbi-header__utility-label {
+	color: $ubc-blue;
+	font-size: .875rem;
+}
+
+.dbi-header__utility-link {
+	color: $ubc-blue;
+}
+
+.dbi-header__utility-link:hover {
+	text-decoration: none;
+}
+
+.dbi-header__nav {
+	display: none;
+}
+
+.dbi-header__links {
+	display: inline-flex;
+	margin: 0;
+	height: 100%;
+}
+
+.dbi-link {
+	text-transform: uppercase;
+	color: $ubc-blue-cobalt;
+	font-size: .875rem;
+	padding-top: .75rem;
+	padding-right: 1rem;
+	padding-bottom: .75rem;
+	padding-left: 1rem;
+	display: block;
+	font-weight: 600;
+}
+
+.dbi-link--alt {
+	color: $grey-500;
+	font-size: .875rem;
+	padding-top: .75rem;
+	padding-right: 1rem;
+	padding-bottom: .75rem;
+	padding-left: 1rem;
+	display: block;
+}
+
+@media (min-width: $breakpoint--md) {
+	.dbi-header {
+		background-color: $grey-50;
+	}
+
+	.dbi-header::before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 3.563rem; /* 57px */
+		display: block;
+		content: '';
+		background-color: $white;
+		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .2), 0 2px 4px -1px rgba(0, 0, 0, .06);
+	}
+
+	.dbi-header__container {
+		grid-template-areas:
+			'a b c'
+			'a d d';
+		grid-template-rows: auto auto;
+		z-index: 1;
+		position: relative;
+	}
+
+	.dbi-header__logo {
+		height: 4rem;
+		width: 4rem;
+	}
+
+	.dbi-header__unit-name {
+		padding-top: .75rem;
+		padding-bottom: .75rem;
+		font-size: 1.5rem;
+	}
+
+	.dbi-header__nav {
+		grid-area: d;
+		display: block;
+	}
+
+}
+
+.dbi-dark.dbi-header {
+	background-color: transparent;
+	background: linear-gradient(to bottom, $gradient-ubc-blue-opaque 0%, $gradient-ubc-blue-transparent 100%);
+}
+
+.dbi-dark.dbi-header::before {
+	background-color: $ubc-blue;
+}
+
+.dbi-dark .dbi-header__branding {
+	background-color: $white;
+}
+
+.dbi-dark .dbi-header__logo {
+	color: $ubc-blue;
+}
+
+.dbi-dark .dbi-header__unit-name,
+.dbi-dark .dbi-header__icon,
+.dbi-dark .dbi-header__utility-label,
+.dbi-dark .dbi-header__utility-link,
+.dbi-dark .dbi-link,
+.dbi-dark .dbi-link--alt {
+	color: $white;
+}

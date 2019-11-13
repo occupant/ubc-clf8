@@ -151,8 +151,17 @@ strong {
 }
 
 blockquote {
-	@apply .m-8 .px-8 .py-4 .text-base;
+	@apply .m-8 .py-4 .font-bold .text-ubc-blue-sea .relative;
 	font-weight: 400;
+}
+
+blockquote::after {
+	@apply .absolute .block .bg-ubc-blue-sea;
+	content: '';
+	bottom: 0;
+	left: 0;
+	height: 1px;
+	width: 40%;
 }
 
 table {
@@ -289,6 +298,8 @@ sub {
 		@apply .text-xl;
 		margin-bottom: calc($leading * 1rem);
 	}
+
+
 
 	hr,
 	.hr {

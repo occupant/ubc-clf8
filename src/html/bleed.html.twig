@@ -1,0 +1,42 @@
+{% extends "layouts/default.twig" %}
+{% set title = "Page" %}
+{% set pageTitle = "A basic page" %}
+{% set pageFeatureTitle = "Plan. Manage. Collaborate." %}
+{% set pageFeatureImage = "4.jpg" %}
+{% set pageIntro = "<p>Behind every project delivered on time and on budget is a skilled project manager who can communicate effectively and manage a team from initiation through to planning execution, control and closing. The ability to juggle timelines, resources, team members, stakeholders, and deliverables makes project managers a valuable asset to any organization.</p>
+<p>Our project management offerings give you the essential skills needed to excel in successful project delivery in a wide variety of disciplines, along with a toolkit you can put to work immediately whether you are in industry, government or a community organization.</p>" %}
+
+{% block content %}
+<main class="unit-content">
+	<div class="container mx-auto p-4 ">
+		{% include "components/navigation--breadcrumbs.twig" %}
+		<h1 class="text-ubc-blue-cobalt">{{ pageTitle }}</h1>
+		<div class="">
+			<div>
+				{{ pageIntro }}
+				{{ loremIpsum }}
+				<h3 class="uppercase mt-12">Full bleed content in container</h3>
+				<hr />
+				<h2>Some title</h2>
+				<p>Some text in a container</p>
+				<div class="bg-ubc-blue full-bleed p-6 text-white my-6">
+					<h2>Some title</h2>
+					<p>Some text in a container in a full bleed region</p>
+					<!-- need to add the same markup as the body container to replicate it -->
+					<div class="container mx-auto p-4">
+						<p>Some text in a container in a full bleed region in a container!</p>
+					</div>
+				</div>
+				<p>Some text in a container</p>
+			</div>
+		</div>
+	</div>
+</main>
+
+{% endblock %}
+
+{% block custom_css %}
+{% endblock %}
+
+{% block custom_javascript %}
+{% endblock %}

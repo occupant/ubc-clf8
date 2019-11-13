@@ -49,6 +49,7 @@ label {
 [type='tel'],
 [type='color'],
 textarea {
+	box-sizing: border-box;
 	width: 100%;
 	max-width: 100%;
 	padding: .5rem 1rem;
@@ -303,6 +304,13 @@ legend {
 .form-toggle input:checked + label:after {
 	left: calc(100% - 1px);
 	transform: translateX(-100%);
+}
+
+.form-toggle input:focus + label {
+	outline: none;
+	box-shadow:
+		0 0 0 .375rem $focus-bg,
+		0 0 0 1px $focus-inner-bg !important;
 }
 
 /* form field required styles */
