@@ -1,0 +1,22 @@
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: #222;
+		color: #ccc !important;
+	}
+	.tabcordion__tab button,
+	.text-lead,
+	.text-black,
+	.card__title,
+	.text-ubc-blue {
+		color: #ccc !important;
+	}
+	.card__meta {
+		color: #000 !important;
+	}
+	.ubc-card {
+		border: 1px solid #ccc;
+	}
+	.bg-white {
+		background-color: inherit;
+	}
+}

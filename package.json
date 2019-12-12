@@ -25,6 +25,7 @@
 		"test": "snyk test",
 		"serve": "cross-env NODE_ENV=development concurrently \"postcss src/css/styles.css -o build/css/styles-all.css --watch\" \"live-server ./build --watch\" ",
 		"dbi": "cross-env NODE_ENV=development postcss src/css/dbi.css -o build/css/dbi.css && cross-env NODE_ENV=production postcss src/css/dbi.css -o dist/css/dbi.css",
+		"dark": "cross-env NODE_ENV=development postcss src/css/dark.mode.css -o build/css/dark.mode.css && cross-env NODE_ENV=production postcss src/css/dark.mode.css -o dist/css/dark.mode.css",
 		"lint:css": "stylelint \"src/**/*.css\" || exit 0",
 		"lint:fix-css": "stylelint \"src/**/*.css\" --fix || exit 0",
 		"build:dev": "npm run development",
