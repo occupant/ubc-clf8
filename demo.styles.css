@@ -1,0 +1,51 @@
+/* DEMO STYLING - IGNORE */
+body {
+  padding: 2rem;
+}
+
+/* BASE STYLES (assumed present) */
+:focus,
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 6px rgba(64, 180, 229, 0.5), 0 0 0 1px rgba(0, 33, 69, 1) !important;
+}
+
+[tabindex="-1"]:focus {
+  outline: none !important;
+}
+
+[hidden] {
+  display: none;
+}
+
+a,
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  transition: background-color 0.125s ease, color 0.125s ease;
+}
+
+a {
+  /* @apply .no-underline; */
+  text-decoration: none;
+}
+
+a:hover {
+  /* @apply .underline; */
+  text-decoration: underline;
+}
+
+svg {
+  stroke-width: 2;
+  fill: none;
+}
+
+/* THEME VARIABLES */
+:root {
+  --color-primary: #003a79;
+  --color-primary--light: #0055b7;
+  --color-primary--dark: #002145;
+  --default-link-color: var(--color-primary);
+  --default-link-color--hover: var(--color-primary--light);
+}
